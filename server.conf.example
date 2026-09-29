@@ -1,0 +1,22 @@
+# ubnt-autoreboot - configuration
+# Protect this file: chmod 600 server.conf (it contains the password)
+
+[controller]
+host = 
+port = 8443
+site = default
+username = 
+password = 
+# Local controllers use a self-signed certificate; keep this false
+verify_ssl = false
+# Maximum time to wait for a controller response, in seconds
+timeout = 15
+
+[reboot]
+# Device types to restart (uap = access points). E.g.: uap,usw
+device_types = uap
+# Pause between restarts, in seconds
+delay_between = 2
+
+[logging]
+log_dir = /var/log/ubnt-autoreboot
